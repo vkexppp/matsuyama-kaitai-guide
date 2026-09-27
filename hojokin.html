@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>補助金申請キット｜松山解体ガイド</title>
+<meta name="description" content="松山市の解体補助金（老朽危険空家除却事業）の申請キットを自動作成。質問に答えるだけで、あなた専用の必要書類チェックリスト・取り方ガイド・記入見本・スケジュールが完成します。無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#fffdf9;--cream:#fdf4e7;--ink:#3d3428;--text:#54493c;--muted:#98897a;
+    --line:#eee1d2;--orange:#ef8200;--orange-deep:#d96f00;--orange-pale:#fff3e2;
+    --leaf:#5f9440;--dark:#463a2c;
+    --display:'Zen Maru Gothic','Hiragino Maru Gothic ProN',sans-serif;
+    --sans:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--text);background:var(--ground);line-height:1.95;font-size:15px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+  header.site{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .head-in{max-width:880px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .logo{display:flex;align-items:center;gap:10px}
+  .logo b{font-family:var(--display);font-weight:900;font-size:19px;color:var(--ink)}
+  .logo small{display:block;font-size:10px;color:var(--muted);letter-spacing:.1em;line-height:1.2}
+  .head-tel{background:var(--orange);color:#fff;padding:9px 18px;border-radius:999px;font-weight:700;font-size:13px;white-space:nowrap;box-shadow:0 3px 0 var(--orange-deep)}
+
+  .pagehead{background:var(--cream);border-bottom:1px solid var(--line);padding:46px 0 38px}
+  .tag{display:inline-block;background:var(--orange);color:#fff;font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.16em;border-radius:999px;padding:5px 18px;margin-bottom:12px}
+  h1{font-family:var(--display);font-weight:900;font-size:clamp(24px,4.6vw,36px);color:var(--ink);line-height:1.55;letter-spacing:.03em;text-wrap:balance}
+  .pagehead p{margin-top:12px;max-width:38em;font-size:14px}
+
+  .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .facts span{background:#fff;border:1.5px dashed var(--orange);color:var(--orange-deep);border-radius:999px;padding:6px 16px;font-size:12.5px;font-weight:700}
+
+  section{padding:44px 0}
+  .card{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:26px}
+
+  .q{margin-bottom:24px}
+  .q>p.label{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;color:var(--ink);font-size:15px;margin-bottom:10px}
+  .q>p.label .n{flex:0 0 28px;height:28px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900}
+  .pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .pick button{border:2px solid var(--line);background:#fff;border-radius:12px;padding:14px 8px;text-align:center;cursor:pointer;font-family:var(--sans);transition:all .15s;font-size:14px;color:var(--ink);font-weight:700}
+  .pick button span{display:block;font-size:10px;color:var(--muted);margin-top:3px;font-weight:400}
+  .pick button:hover{border-color:var(--orange)}
+  .pick button.sel{border-color:var(--orange);background:var(--orange-pale);color:var(--orange-deep)}
+  .q input[type=text],.q input[type=email]{width:100%;border:2px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14px;background:#fff}
+  .q input:focus{border-color:var(--orange);outline:none}
+  .fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+  .chk{display:flex;gap:10px;align-items:center;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;background:#fff;font-size:13.5px;color:var(--ink);margin-top:10px}
+  .chk .box{flex:0 0 20px;height:20px;border:2px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:900}
+  .chk.on{border-color:var(--orange);background:var(--orange-pale)}
+  .chk.on .box{background:var(--orange);border-color:var(--orange)}
+  .go{width:100%;margin-top:6px;background:var(--orange);color:#fff;border:none;border-radius:999px;padding:16px;font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.08em;cursor:pointer;box-shadow:0 4px 0 var(--orange-deep);transition:transform .15s}
+  .go:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--orange-deep)}
+  #err{display:none;font-size:12px;color:#c0392b;font-weight:700;text-align:center;margin-top:10px}
+  .note{font-size:12px;color:var(--muted);margin-top:12px}
+
+  /* ===== キット ===== */
+  #kit{display:none}
+  .kit-head{background:var(--dark);color:#fff;border-radius:20px;padding:26px;margin-bottom:18px}
+  .kit-head .cap{font-size:11px;letter-spacing:.26em;color:#cbb9a4;font-weight:700}
+  .kit-head h2{font-family:var(--display);font-weight:900;font-size:clamp(20px,3.6vw,27px);margin:6px 0 4px}
+  .kit-head .max{color:#ffb257;font-family:var(--display);font-weight:900}
+  .warn{background:#fff7ed;border:1.5px solid #f0b060;border-radius:12px;padding:12px 16px;font-size:13px;color:#8a5a00;margin-top:10px}
+  .warn b{color:#8a5a00}
+  .kit-sec{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:24px;margin-bottom:18px}
+  .kit-sec h3{font-family:var(--display);font-weight:900;color:var(--ink);font-size:18px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--orange)}
+  .doc{display:flex;gap:12px;align-items:flex-start;padding:12px 4px;border-bottom:1px dashed var(--line)}
+  .doc:last-child{border-bottom:none}
+  .doc .cb{flex:0 0 22px;height:22px;border:2px solid var(--line2,#cbb9a4);border-radius:6px;margin-top:4px}
+  .doc b{display:block;color:var(--ink);font-size:14px}
+  .doc small{display:block;font-size:12px;color:var(--muted);line-height:1.7}
+  .doc .who{display:inline-block;font-size:10.5px;font-weight:700;border-radius:999px;padding:2px 10px;margin-left:6px;vertical-align:2px}
+  .who.you{background:var(--orange-pale);color:var(--orange-deep)}
+  .who.us{background:#eef5e9;color:var(--leaf)}
+  .mihon{display:grid;grid-template-columns:150px 1fr;border:1.5px solid var(--line);border-radius:12px;overflow:hidden}
+  .mihon dt{background:var(--cream);padding:11px 14px;font-size:12.5px;font-weight:700;color:var(--ink);border-bottom:1px solid var(--line)}
+  .mihon dd{padding:11px 14px;font-size:13.5px;border-bottom:1px solid var(--line)}
+  .mihon dt:last-of-type,.mihon dd:last-of-type{border-bottom:none}
+  @media(max-width:560px){.mihon{grid-template-columns:110px 1fr}}
+  .sched{counter-reset:s;display:grid;gap:10px}
+  .sched li{list-style:none;display:flex;gap:14px;align-items:flex-start;background:var(--ground);border:1.5px solid var(--line);border-radius:12px;padding:12px 16px;font-size:13.5px}
+  .sched li::before{counter-increment:s;content:counter(s);flex:0 0 30px;height:30px;background:var(--orange);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:900;font-size:14px}
+  .sched b{color:var(--ink)}
+  .kit-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-family:var(--display);font-weight:700;font-size:14.5px;transition:transform .15s;border:none;cursor:pointer;flex:1 1 200px}
+  .btn-primary{background:var(--orange);color:#fff;box-shadow:0 4px 0 var(--orange-deep)}
+  .btn-white{background:#fff;color:var(--ink);border:2px solid var(--ink);box-shadow:0 4px 0 var(--ink)}
+  .btn:hover{transform:translateY(2px)}
+  .legal{font-size:11.5px;color:var(--muted);line-height:1.9;margin-top:14px}
+
+  footer{background:var(--dark);color:#cbb9a4;font-size:12px;padding:24px 20px;text-align:center}
+  footer b{color:#fff}
+  footer a{text-decoration:underline}
+
+  @media print{
+    header.site,.pagehead .facts,#form-card,.kit-btns,footer,.back-link{display:none!important}
+    body{background:#fff}
+    .kit-sec,.kit-head{border-radius:0;border-color:#ccc;page-break-inside:avoid}
+    .kit-head{background:#fff;color:#000;border:2px solid #000}
+    .kit-head .cap,.kit-head .max{color:#000}
+    #kit{display:block!important}
+  }
+  :focus-visible{outline:2.5px solid var(--orange-deep);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="head-in">
+    <a href="index.html" class="logo" aria-label="松山解体ガイド トップへ戻る">
+      <div><b>松山解体ガイド</b><small>← トップページへ戻る</small></div>
+    </a>
+    <a class="head-tel" href="tel:0899246604">☎ 089-924-6604</a>
+  </div>
+</header>
+
+<div class="pagehead">
+  <div class="wrap">
+    <span class="tag">補助金申請キット</span>
+    <h1>松山市の解体補助金、<br>申請キットを自動作成します</h1>
+    <p>松山市の「老朽危険空家除却事業」向け。下の質問に答えるだけで、<b>あなた専用の必要書類チェックリスト・取り方ガイド・記入見本・スケジュール</b>ができあがります。無料でご利用いただけます。</p>
+    <div class="facts">
+      <span>補助対象経費の5分の4</span>
+      <span>上限100万円（島しょ部160万円）</span>
+      <span>事前相談制・期別の予算枠あり</span>
+    </div>
+    <p class="note">※ 令和8年度の制度概要にもとづきます。年度により内容・受付期間が変わります。</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="card" id="form-card">
+      <div class="q">
+        <p class="label"><span class="n">1</span>壊したい建物の住所（松山市内）</p>
+        <input type="text" id="k-addr" placeholder="例：松山市◯◯町1-2-3">
+        <div class="chk" id="k-island" onclick="this.classList.toggle('on')"><span class="box">✓</span>建物は島しょ部（中島・興居島など）にある</div>
+      </div>
+      <div class="q">
+        <p class="label"><span class="n">2</span>建物はどれくらいのあいだ空き家ですか？</p>
+        <div class="pick" id="k-vacant">
+          <button type="button" data-v="1年以上" onclick="kPick(this,'k-vacant')">1年以上</button>
+          <button type="button" data-v="1年未満" onclick="kPick(this,'k-vacant')">1年未満</button>
+          <button type="button" data-v="わからない" onclick="kPick(this,'k-vacant')">わからない</button>
+        </div>
+      </div>
+      <div class="q">
+        <p class="label"><span class="n">3</span>建物の名義は？</p>
+        <div class="pick" id="k-owner">
+          <button type="button" data-v="自分" onclick="kPick(this,'k-owner')">自分の名義</button>
+          <button type="button" data-v="相続" onclick="kPick(this,'k-owner')">亡くなった家族の名義<span>（相続した・する予定）</span></button>
+          <button type="button" data-v="共有・その他" onclick="kPick(this,'k-owner')">共有・その他</button>
+        </div>
+      </div>
+      <div class="q">
+        <p class="label"><span class="n">4</span>市税（固定資産税など）の滞納は？</p>
+        <div class="pick" id="k-tax">
+          <button type="button" data-v="なし" onclick="kPick(this,'k-tax')">ない</button>
+          <button type="button" data-v="あり・わからない" onclick="kPick(this,'k-tax')">ある・わからない</button>
+        </div>
+      </div>
+      <div class="q">
+        <p class="label"><span class="n">5</span>建物の傷み具合は？</p>
+        <div class="pick" id="k-damage">
+          <button type="button" data-v="大きい" onclick="kPick(this,'k-damage')">かなり傷んでいる<span>屋根・壁の穴、傾きなど</span></button>
+          <button type="button" data-v="少ない" onclick="kPick(this,'k-damage')">傷みは少ない・わからない</button>
+        </div>
+      </div>
+      <div class="q">
+        <p class="label"><span class="n">6</span>お名前とメールアドレス</p>
+        <div class="fields">
+          <input type="text" id="k-name" placeholder="お名前（例：松山 太郎）">
+          <input type="email" id="k-email" placeholder="メールアドレス">
+        </div>
+      </div>
+      <button class="go" onclick="kMake()">申請キットを作成する（無料）</button>
+      <p id="err">住所・各質問・お名前・メールアドレスをご確認ください</p>
+    </div>
+
+    <!-- ===== 生成されるキット ===== -->
+    <div id="kit">
+      <div class="kit-head">
+        <p class="cap">あなた専用・補助金申請キット</p>
+        <h2 id="kit-title"></h2>
+        <p id="kit-max" style="font-size:14px"></p>
+        <div id="kit-warns"></div>
+      </div>
+
+      <div class="kit-sec">
+        <h3>① あなたの必要書類チェックリスト</h3>
+        <p style="font-size:12.5px;color:var(--muted);margin-bottom:8px"><span class="who you">ご本人</span>が用意するもの／<span class="who us">成王建設</span>が無料で用意するもの</p>
+        <div id="kit-docs"></div>
+      </div>
+
+      <div class="kit-sec">
+        <h3>② 申請書の記入見本（あなたの内容で作成済み）</h3>
+        <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px">申請書の様式は松山市のホームページ、または事前相談のときに受け取れます。以下をそのまま書き写せばOKです。</p>
+        <dl class="mihon" id="kit-mihon"></dl>
+      </div>
+
+      <div class="kit-sec">
+        <h3>③ 申請から入金までのスケジュール</h3>
+        <ol class="sched">
+          <li><div><b>市役所に事前相談</b>（必須）。この時点で書類が全部そろっていなくてもOK。成王建設が同行できます。</div></li>
+          <li><div><b>受付期間内に申請</b>。期ごとに予算枠があり、上限に達すると受付終了。早い者勝ちです。</div></li>
+          <li><div><b>市の審査・不良度判定</b>。市の職員が建物を確認します。</div></li>
+          <li><div><b>交付決定</b>。<b style="color:#c0392b">※交付決定より前に契約・着工すると補助金の対象外になります。</b>ここが一番大事な順番です。</div></li>
+          <li><div><b>解体工事</b>（成王建設）。工事中・工事後の写真は当社が撮影します。</div></li>
+          <li><div><b>実績報告 → 補助金の入金</b>。報告書類の準備も当社がお手伝いします。</div></li>
+        </ol>
+      </div>
+
+      <div class="kit-sec">
+        <h3>④ 成王建設の無料サポート</h3>
+        <p style="font-size:13.5px">見積書の作成、建物の写真撮影、位置図の準備、事前相談への同行、工事後の実績報告のお手伝い——<b>工事会社として用意できるものはすべて無料でご用意します。</b>この内容はメールでも当社に届いていますので、こちらからフォローのご連絡をさせていただきます。お急ぎの方はお電話ください（089-924-6604）。</p>
+        <p class="legal">※ 本キットは、ご本人が申請手続きを行うための参考資料を自動作成するものです。申請書類の作成・提出はご本人が行ってください（行政書士以外の第三者が報酬を得て申請書類を代行作成することは法律で認められていません）。制度の内容・要件の最終判断は松山市が行います。</p>
+      </div>
+
+      <div class="kit-btns">
+        <button class="btn btn-primary" onclick="window.print()">印刷・PDFで保存する</button>
+        <a class="btn btn-white" href="tel:0899246604">☎ 電話で相談する（無料）</a>
+      </div>
+    </div>
+
+    <p class="back-link" style="margin-top:22px;font-size:13px"><a href="index.html" style="color:var(--orange-deep);font-weight:700">← 松山解体ガイド トップへ戻る（費用のAIかんたん査定はこちら）</a></p>
+  </div>
+</section>
+
+<footer>
+  <b>松山解体ガイド</b>　運営：株式会社成王建設　<a href="index.html">トップページ</a>
+</footer>
+
+<script>
+  function kPick(btn,gid){document.querySelectorAll('#'+gid+' button').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');}
+  function kVal(gid){const b=document.querySelector('#'+gid+' button.sel');return b?b.dataset.v:'';}
+  function kMake(){
+    const addr=document.getElementById('k-addr').value.trim();
+    const name=document.getElementById('k-name').value.trim();
+    const email=document.getElementById('k-email').value.trim();
+    const island=document.getElementById('k-island').classList.contains('on');
+    const vacant=kVal('k-vacant'), owner=kVal('k-owner'), tax=kVal('k-tax'), damage=kVal('k-damage');
+    const err=document.getElementById('err');
+    const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if(!addr||!name||!emailOk||!vacant||!owner||!tax||!damage){err.style.display='block';return;}
+    err.style.display='none';
+
+    const max=island?'160万円':'100万円';
+    document.getElementById('kit-title').textContent=name+'様（'+addr+'）';
+    document.getElementById('kit-max').innerHTML='想定される補助上限：<span class="max">補助対象経費の5分の4・最大'+max+'</span>';
+
+    // 注意フラグ
+    let warns='';
+    if(vacant!=='1年以上')warns+='<div class="warn"><b>確認ポイント：</b>対象になるのは、おおむね1年以上使われていない空き家です。「'+vacant+'」の場合も、まずは事前相談で市に確認しましょう（当社が無料で確認をお手伝いします）。</div>';
+    if(tax!=='なし')warns+='<div class="warn"><b>確認ポイント：</b>申請には市税の完納証明書が必要です。納税状況の確認からはじめましょう。</div>';
+    if(damage!=='大きい')warns+='<div class="warn"><b>確認ポイント：</b>この補助金は、市の「不良度判定」で一定以上傷んでいると認められた建物が対象です。写真をもとに見込みを無料で診断できます。</div>';
+    if(owner==='共有・その他')warns+='<div class="warn"><b>確認ポイント：</b>共有名義の場合、共有者全員の同意が必要になるのが一般的です。事前相談の際に確認しましょう。</div>';
+    document.getElementById('kit-warns').innerHTML=warns;
+
+    // 書類リスト
+    const docs=[
+      ['交付申請書（市の様式）','下の②の記入見本のとおりに記入すればOK。様式は松山市HPまたは事前相談で入手。','you'],
+      ['住民票','市役所市民課で取得。マイナンバーカードがあればコンビニでも取れます（数百円）。','you'],
+      ['登記事項証明書 または 固定資産公課証明書','登記事項証明書は法務局（オンライン請求も可）。公課証明書は市役所の資産税担当窓口。','you'],
+      ['市税の完納証明書','市役所の納税担当窓口で取得。','you'],
+      ['銀行口座の確認書類','補助金の振込先。通帳のコピーなどでOK。','you'],
+      ['確約書（市の様式）','事前相談のときにもらえます。署名するだけです。','you'],
+      ['建物の写真（外観・傷んでいる箇所）','当社が現地調査のときに撮影します。ご自身で用意する必要はありません。','us'],
+      ['位置図（地図）','当社が用意します。','us'],
+      ['解体工事の見積書','当社が無料で作成します。','us']
+    ];
+    if(owner==='相続')docs.splice(2,0,['戸籍謄本（相続関係がわかるもの）','名義人が亡くなっている場合に必要。本籍地の市区町村役場で取得（広域交付制度で松山市役所でも取れる場合があります）。','you']);
+    document.getElementById('kit-docs').innerHTML=docs.map(d=>'<div class="doc"><span class="cb"></span><div><b>'+d[0]+'<span class="who '+d[2]+'">'+(d[2]==='you'?'ご本人':'成王建設')+'</span></b><small>'+d[1]+'</small></div></div>').join('');
+
+    // 記入見本
+    const mihon=[
+      ['申請者の氏名',name],
+      ['対象の空家の所在地',addr],
+      ['建物の名義',owner==='自分'?'申請者本人':owner==='相続'?'被相続人名義（相続）→ 戸籍謄本を添付':'共有・その他 → 事前相談で確認'],
+      ['空家になった時期','おおむね'+(vacant==='1年以上'?'1年以上前から空家':vacant)+'（正確な時期がわかれば年月を記入）'],
+      ['解体工事の施工業者','株式会社成王建設（松山市西長戸町250-6／建設業許可業者）'],
+      ['添付書類','上の①チェックリストのとおり']
+    ];
+    document.getElementById('kit-mihon').innerHTML=mihon.map(m=>'<dt>'+m[0]+'</dt><dd>'+m[1]+'</dd>').join('');
+
+    // リード送信
+    try{
+      fetch('https://formsubmit.co/ajax/naruo.kaitai@gmail.com',{
+        method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+        body:JSON.stringify({_subject:'【松山解体ガイド】補助金申請キット作成',_template:'table',
+          お名前:name,メールアドレス:email,物件住所:addr,島しょ部:island?'はい（上限160万円）':'いいえ（上限100万円）',
+          空き家期間:vacant,名義:owner,市税滞納:tax,傷み具合:damage})
+      }).catch(()=>{});
+    }catch(e){}
+
+    document.getElementById('kit').style.display='block';
+    document.getElementById('kit').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+</script>
+</body>
+</html>
