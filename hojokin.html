@@ -125,17 +125,20 @@
     <span class="tag">補助金申請キット</span>
     <h1>松山市の解体補助金、<br>申請キットを自動作成します</h1>
     <p>松山市の「老朽危険空家除却事業」向け。下の質問に答えるだけで、<b>あなた専用の必要書類チェックリスト・取り方ガイド・記入見本・スケジュール</b>ができあがります。無料でご利用いただけます。</p>
-    <div class="facts">
-      <span>補助対象経費の5分の4</span>
-      <span>上限100万円（島しょ部160万円）</span>
-      <span>事前相談制・期別の予算枠あり</span>
-    </div>
     <p class="note">※ 令和8年度の制度概要にもとづきます。年度により内容・受付期間が変わります。</p>
   </div>
 </div>
 
 <section>
   <div class="wrap">
+    <div class="card" id="official" style="margin-bottom:18px">
+      <h3 style="font-family:var(--display);font-weight:900;color:var(--ink);font-size:16.5px;margin-bottom:10px;padding-left:12px;border-left:4px solid var(--orange)">松山市の公式情報（様式はここから入手できます）</h3>
+      <p style="font-size:13.5px;line-height:2.1">
+        ・<a href="https://www.city.matsuyama.ehime.jp/kurashi/kurashi/hojokin/akiyajokyaku.html" target="_blank" rel="noopener" style="color:var(--orange-deep);font-weight:700;text-decoration:underline">松山市「老朽危険空家除却事業」公式ページ</a>——交付申請書（様式第1号）などの<b>様式ダウンロード</b>と、<b>最新の受付状況</b>はこちらで確認できます。<br>
+        ・担当窓口：<b>松山市 住宅課</b>（市役所 本館7階／松山市二番町四丁目7-2）　電話 <a href="tel:0899486787" style="color:var(--orange-deep);font-weight:700">089-948-6787</a><br>
+        ・事前相談の受付：令和8年5月1日〜令和9年1月12日（申請の受付期とは別に、相談はいつでもできます）
+      </p>
+    </div>
     <div class="card" id="form-card">
       <div class="q">
         <p class="label"><span class="n">1</span>壊したい建物の住所（松山市内）</p>
@@ -200,14 +203,14 @@
 
       <div class="kit-sec">
         <h3>② 申請書の記入見本（あなたの内容で作成済み）</h3>
-        <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px">申請書の様式は松山市のホームページ、または事前相談のときに受け取れます。以下をそのまま書き写せばOKです。</p>
+        <p style="font-size:12.5px;color:var(--muted);margin-bottom:10px">交付申請書（様式第1号）は、ページ上部「松山市の公式情報」のリンクからダウンロードできます。以下をそのまま書き写せばOKです。</p>
         <dl class="mihon" id="kit-mihon"></dl>
       </div>
 
       <div class="kit-sec">
         <h3>③ 申請から入金までのスケジュール</h3>
         <ol class="sched">
-          <li><div><b>市役所に事前相談</b>（必須）。この時点で書類が全部そろっていなくてもOK。成王建設が同行できます。</div></li>
+          <li><div><b>市役所 住宅課に事前相談</b>（必須）。窓口は市役所本館7階、電話 089-948-6787。書類が全部そろっていなくてもOK。成王建設が同行できます。</div></li>
           <li><div><b>受付期間内に申請</b>。期ごとに予算枠があり、上限に達すると受付終了。早い者勝ちです。</div></li>
           <li><div><b>市の審査・不良度判定</b>。市の職員が建物を確認します。</div></li>
           <li><div><b>交付決定</b>。<b style="color:#c0392b">※交付決定より前に契約・着工すると補助金の対象外になります。</b>ここが一番大事な順番です。</div></li>
@@ -264,7 +267,7 @@
 
     // 書類リスト
     const docs=[
-      ['交付申請書（市の様式）','下の②の記入見本のとおりに記入すればOK。様式は松山市HPまたは事前相談で入手。','you'],
+      ['交付申請書（様式第1号）','上の「松山市の公式情報」のリンク先からWord/PDFでダウンロードできます。書き方は下の②の記入見本のとおり。事前相談のときに紙でもらうこともできます。','you'],
       ['住民票','市役所市民課で取得。マイナンバーカードがあればコンビニでも取れます（数百円）。','you'],
       ['登記事項証明書 または 固定資産公課証明書','登記事項証明書は法務局（オンライン請求も可）。公課証明書は市役所の資産税担当窓口。','you'],
       ['市税の完納証明書','市役所の納税担当窓口で取得。','you'],
