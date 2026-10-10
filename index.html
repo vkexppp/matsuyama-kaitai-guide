@@ -67,8 +67,8 @@
   .hero-badges span{background:rgba(255,253,249,.92);border-radius:999px;padding:7px 16px;font-size:12.5px;font-weight:700;color:var(--ink)}
   .hero-badges span em{font-style:normal;color:var(--orange-deep)}
   @media(max-width:640px){
-    .hero{min-height:0}
-    .hero-in{padding:38px 20px 38px}
+    .hero{min-height:calc(100svh - 96px)}
+    .hero-in{padding:30px 20px 34px}
     .hero .bg{background-position:64% center}
     .hero .shade{background:linear-gradient(to bottom,rgba(38,28,14,.68) 0%,rgba(38,28,14,.52) 55%,rgba(38,28,14,.34) 100%)}
     .cta-row{flex-direction:column;align-items:stretch}
@@ -208,7 +208,7 @@
       <a href="#faq">よくある質問</a>
       <a href="#about">運営について</a>
     </nav>
-    <a class="head-tel" href="tel:0899246604">☎ 089-924-6604</a>
+    <a class="head-tel" href="#about">お問い合わせ</a>
   </div>
 </header>
 
@@ -342,7 +342,6 @@
           <p class="cap">解体費用の自動査定（税込・目安）</p>
           <div class="val" id="w-result"></div>
           <p class="sub" id="w-result-note"></p>
-          <div class="hojo-badge" id="w-hojo">この地域には解体の補助金制度があります（松山市は最大100万円）。対象になる可能性があるか、無料でお調べします。</div>
         </div>
         <p class="note">※ 実績データに基づく自動概算です。建物の状態・立地・廃材量などにより実際の金額は変動します。正確な金額は無料の現地調査でご確認ください。</p>
         <div class="sim-ctas">
@@ -433,15 +432,15 @@
         <div class="row"><dt>運営</dt><dd>株式会社 成王建設</dd></div>
         <div class="row"><dt>代表取締役</dt><dd>菅 正行</dd></div>
         <div class="row"><dt>資本金</dt><dd>5,000千円</dd></div>
-        <div class="row"><dt>所在地</dt><dd>〒791-8017 愛媛県松山市西長戸町250-6</dd></div>
-        <div class="row"><dt>事業所</dt><dd>〒799-2652 愛媛県松山市福角町甲909番2 他</dd></div>
-        <div class="row"><dt>TEL</dt><dd><a href="tel:0899246604">089-924-6604</a></dd></div>
-        <div class="row"><dt>Email</dt><dd>naruo.kaitai@gmail.com</dd></div>
+        <div class="row"><dt>所在地</dt><dd>〒791-8017<br>愛媛県松山市<span style="white-space:nowrap">西長戸町250-6</span></dd></div>
+        <div class="row"><dt>事業所</dt><dd>〒799-2652<br>愛媛県松山市<span style="white-space:nowrap">福角町甲909番2他</span></dd></div>
+        <div class="row"><dt>TEL</dt><dd><a href="tel:0899246604" style="color:var(--orange-deep);font-weight:700">089-924-6604</a></dd></div>
+        <div class="row"><dt>Email</dt><dd><a href="mailto:naruo.kaitai@gmail.com" style="color:var(--orange-deep);font-weight:700">naruo.kaitai@gmail.com</a></dd></div>
         <div class="row"><dt>建設業許可</dt><dd>愛媛県知事 第014057号</dd></div>
         <div class="row"><dt>産業廃棄物収集運搬業許可</dt><dd>第03802100626号 他</dd></div>
       </dl>
       <div class="about-note">
-        <b>対応エリア。</b>松山市を中心に、伊予市・東温市・砥部町・松前町・今治市・西条市ほか愛媛県内に対応しています。松山解体ガイドは、比較サイトではなく、地元の解体専門会社が直接運営する案内サイトです。
+        <b>対応エリア。</b>松山市を中心に、伊予市・東温市・砥部町・松前町・今治市・西条市ほか愛媛県内に対応しています。松山解体ガイドは、地元の解体専門会社が直接運営する案内サイトです。
       </div>
     </div>
   </div>
@@ -523,7 +522,6 @@
     const td=Math.round(tsubo*10)/10;
     document.getElementById('w-result').innerHTML='<span class="big">'+wYen(low)+'</span><span style="color:#a89680;font-size:20px;margin:0 8px">〜</span><span class="big">'+wYen(high)+'</span>';
     document.getElementById('w-result-note').textContent='想定延床：約'+td+'坪（'+W.struct+'・'+(W.floors===1?'平屋':W.floors+'階建て')+(W.sizeMode==='madori'?'・間取りから推定':'')+'）'+(addRatio>0?'／追加条件 +'+Math.round(addRatio*100)+'%':'');
-    document.getElementById('w-hojo').style.display=city&&city!=='その他（愛媛県内）'?'block':'none';
     try{
       fetch('https://formsubmit.co/ajax/naruo.kaitai@gmail.com',{
         method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
