@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="愛媛・松山の解体費用をAIでかんたん査定。松山市の補助金申請キットも自動作成。松山の解体に特化した無料ガイド。">
+<meta name="description" content="松山の解体費用をAIでかんたん査定。松山市の補助金申請キットも自動作成。愛媛・松山の解体に特化した無料ガイド。">
 </head>
 <body>
 <title>松山解体ガイド</title>
@@ -51,10 +51,16 @@
   .hero-in{position:relative;max-width:980px;margin:0 auto;padding:64px 20px 52px;width:100%}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,253,249,.92);border-radius:999px;padding:6px 16px;font-size:12px;font-weight:700;color:var(--orange-deep);letter-spacing:.1em;margin-bottom:22px}
   .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
-  h1{font-family:var(--display);font-weight:900;font-size:clamp(27px,4.8vw,48px);color:#fff;line-height:1.5;letter-spacing:.04em;text-wrap:balance;text-shadow:0 2px 18px rgba(30,20,8,.55)}
-  .h1b{font-family:var(--display);font-weight:900;color:#ffd9a8;font-size:clamp(18px,3vw,27px);letter-spacing:.04em;margin-top:4px;text-shadow:0 2px 14px rgba(30,20,8,.55)}
+  h1{font-family:var(--display);font-weight:900;font-size:clamp(32px,6vw,54px);color:#fff;line-height:1.5;letter-spacing:.04em;text-wrap:balance;text-shadow:0 2px 18px rgba(30,20,8,.55)}
+  .h1b{font-family:var(--display);font-weight:900;color:#ffd9a8;font-size:clamp(20px,3.6vw,32px);letter-spacing:.04em;margin-top:10px;text-shadow:0 2px 14px rgba(30,20,8,.55)}
   .hero-desc{color:#fff;font-size:clamp(13px,1.8vw,15.5px);line-height:2.05;max-width:36em;margin:16px 0 24px;text-shadow:0 1px 10px rgba(30,20,8,.6)}
-  .hero .cta-row{margin-top:28px}
+  .hero .cta-row{margin-top:clamp(36px,7vh,70px);gap:clamp(16px,4vw,30px)}
+  .hero-main{margin-top:clamp(40px,9vh,90px)}
+  .circle-btn{width:clamp(150px,41vw,200px);aspect-ratio:1;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--display);font-weight:900;font-size:clamp(15px,2vw,19px);line-height:1.65;letter-spacing:.03em;box-shadow:0 14px 26px -10px rgba(20,12,4,.5);transition:transform .18s}
+  .circle-btn:hover{transform:scale(1.05)}
+  .c-orange{background:var(--orange);color:#fff}
+  .c-white{background:#fffdf9;color:var(--ink)}
+  .contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
   .trust{margin-top:20px;color:#fff;font-size:clamp(12px,1.6vw,13.5px);font-weight:700;letter-spacing:.04em;text-shadow:0 1px 10px rgba(30,20,8,.6)}
   .hero p.lead{margin:16px 0 30px;max-width:30em;font-size:clamp(14.5px,2vw,17px);font-weight:700;color:#fff;text-shadow:0 1px 12px rgba(30,20,8,.55)}
   .cta-row{display:flex;flex-wrap:wrap;gap:12px}
@@ -71,15 +77,13 @@
     .hero-in{padding:30px 20px 34px}
     .hero .bg{background-position:64% center}
     .hero .shade{background:linear-gradient(to bottom,rgba(38,28,14,.68) 0%,rgba(38,28,14,.52) 55%,rgba(38,28,14,.34) 100%)}
-    .cta-row{flex-direction:column;align-items:stretch}
-    .cta-row .btn{width:100%}
   }
 
 
   section{padding:64px 0;scroll-margin-top:88px}
   section.alt{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .sec-head{margin-bottom:32px}
-  .sec-head .tag{display:inline-block;background:var(--orange);color:#fff;font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.16em;border-radius:999px;padding:5px 18px;margin-bottom:12px}
+  .sec-head .tag{display:inline-block;background:var(--orange);color:#fff;font-family:var(--display);font-weight:900;font-size:16.5px;letter-spacing:.14em;border-radius:999px;padding:8px 26px;margin-bottom:14px}
   .sec-head h2{font-family:var(--display);font-weight:900;font-size:clamp(22px,3.8vw,31px);color:var(--ink);letter-spacing:.03em;line-height:1.6;text-wrap:balance}
   .sec-head p{color:var(--muted);font-size:13.5px;margin-top:10px;max-width:40em}
   .note{font-size:12px;color:var(--muted);margin-top:12px}
@@ -171,7 +175,7 @@
   .about-note{font-size:13px;background:#fff;border:1.5px dashed var(--line);border-radius:16px;padding:22px 24px}
   .about-note b{color:var(--ink)}
 
-  .cta-band{background:linear-gradient(135deg,#f08a10 0%,#e96f00 100%);color:#fff;text-align:center;padding:70px 20px}
+  .cta-band{background:linear-gradient(135deg,#f08a10 0%,#e96f00 100%);color:#fff;text-align:center;padding:70px 20px;scroll-margin-top:88px}
   .cta-band h2{font-family:var(--display);font-weight:900;font-size:clamp(24px,4.2vw,34px);letter-spacing:.04em;text-wrap:balance}
   .cta-band p{color:#fff3e0;font-size:14px;margin:14px auto 28px;max-width:36em}
   .cta-band .tel{font-family:var(--display);font-size:clamp(28px,5vw,40px);font-weight:900;display:block;color:#fff}
@@ -208,7 +212,7 @@
       <a href="#faq">よくある質問</a>
       <a href="#about">運営について</a>
     </nav>
-    <a class="head-tel" href="#about">お問い合わせ</a>
+    <a class="head-tel" href="#contact">お問い合わせ</a>
   </div>
 </header>
 
@@ -218,12 +222,14 @@
   <div class="bg" role="img" aria-label="青空の下、解体現場の前で談笑する作業員たち"></div>
   <div class="shade"></div>
   <div class="hero-in">
-    <span class="eyebrow">松山の解体に特化した無料ガイド</span>
-    <h1>愛媛・松山の解体費用、<br>AIでかんたん査定。</h1>
-    <p class="h1b">補助金の申請準備も、AIで。</p>
+    <span class="eyebrow">愛媛・松山の解体に特化した無料ガイド</span>
+    <div class="hero-main">
+      <h1>松山の解体費用、AIで。</h1>
+      <p class="h1b">補助金の申請準備も、AIで。</p>
+    </div>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#simulator">AIで解体費用を調べる</a>
-      <a class="btn btn-white" href="hojokin.html">補助金申請キットを作る</a>
+      <a class="circle-btn c-orange" href="#simulator"><span>AIで<br>解体費用を<br>調べる</span></a>
+      <a class="circle-btn c-white" href="hojokin.html"><span>補助金<br>申請キットを<br>作る</span></a>
     </div>
   </div>
 </div>
@@ -378,7 +384,7 @@
     <div class="steps fade">
       <div class="step"><div><h3>お問い合わせ</h3><p>お電話またはAIかんたん査定から。「まだ解体するか決めていない」段階のご相談も歓迎です。</p></div></div>
       <div class="step"><div><h3>無料の現地調査・お見積り</h3><p>現地を拝見して、正式なお見積りを無料でお出しします。しつこい営業はしません。</p></div></div>
-      <div class="step hl"><div><h3>補助金の対象確認・申請サポート</h3><p>補助金が使える場合は、着工前に申請を進めます。交付決定前に着工すると対象外になるため、順番が大切です。</p></div></div>
+      <div class="step"><div><h3>補助金の対象確認・申請サポート</h3><p>補助金が使える場合は、着工前に申請を進めます。交付決定前に着工すると対象外になるため、順番が大切です。</p></div></div>
       <div class="step"><div><h3>ご近所へのごあいさつ・各種届出</h3><p>近隣へのごあいさつ回り、建設リサイクル法の届出などはお任せください。</p></div></div>
       <div class="step"><div><h3>解体工事・整地・お引き渡し</h3><p>木造30坪でおおむね1〜2週間。廃棄物は法令どおりに処理し、マニフェストで管理します。</p></div></div>
     </div>
@@ -447,11 +453,13 @@
 </section>
 
 <div class="cta-band" id="contact">
-  <h2>まずは、気軽に聞いてみてください。</h2>
+  <h2>まずは、気軽に<br>聞いてみてください。</h2>
   <p>金額の目安を知りたいだけでも、<br>補助金が使えるか知りたいだけでも大丈夫。<br>査定・現地調査・お見積りは、すべて無料です。</p>
-  <a class="tel" href="tel:0899246604">089-924-6604</a>
-  <p class="tel-note">受付 8:00-18:00（日曜定休）</p>
-  <a class="btn btn-white" href="#simulator">AIかんたん査定を試す</a>
+  <div class="contact-btns">
+    <a class="btn btn-white" href="tel:0899246604">☎ 089-924-6604</a>
+    <a class="btn btn-white" href="mailto:naruo.kaitai@gmail.com">✉ naruo.kaitai@gmail.com</a>
+  </div>
+  <p class="tel-note" style="margin:18px 0 0">電話受付 8:00-18:00（日曜定休）</p>
 </div>
 
 <footer>
