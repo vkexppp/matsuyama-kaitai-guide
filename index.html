@@ -292,6 +292,14 @@
   summary::before{content:"Q";font-family:var(--display);font-weight:900;color:var(--orange);font-size:16px}
   details .a{padding:0 20px 18px 46px;font-size:13.5px}
 
+  #column .col-list{max-width:640px;margin:0 auto 24px;text-align:left}
+  #column .card{display:flex;align-items:center;gap:14px;background:#fff;border:2px solid var(--line);border-radius:16px;padding:15px 15px 15px 20px;margin-bottom:12px;box-shadow:0 4px 0 var(--line);transition:border-color .15s,box-shadow .15s}
+  #column .card:hover{border-color:var(--orange);box-shadow:0 4px 0 var(--orange-deep)}
+  #column .card .body{flex:1;min-width:0}
+  #column .card .date{font-size:11px;color:var(--muted);letter-spacing:.06em}
+  #column .card .t{display:block;font-family:var(--display);font-weight:900;font-size:15px;color:var(--ink);line-height:1.7;margin-top:2px}
+  #column .card .arrow{flex:0 0 36px;height:36px;border-radius:50%;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:900;font-size:16px;box-shadow:0 3px 0 var(--orange-deep)}
+
   .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:start}
   .about-grid dl{background:#fff;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
   .about-grid .row{display:grid;grid-template-columns:128px 1fr;border-bottom:1px solid var(--line)}
@@ -565,6 +573,7 @@
       <h2>解体の「知りたい」に<br>答えるコラム</h2>
       <p style="margin-left:auto;margin-right:auto">費用相場・補助金・手続きのギモンを、<br>松山の解体のプロがわかりやすく解説します。</p>
     </div>
+    <div class="col-list fade" id="col-latest"></div>
     <a class="btn btn-primary fade" href="column.html">コラム一覧を見る →</a>
   </div>
 </section>
@@ -686,6 +695,16 @@
     document.querySelector('.wiz').scrollIntoView({behavior:'smooth',block:'start'});
   }
   function wRestart(){wNext(1);}
+
+  /* ===== 最新コラム3件をトップに自動表示（column.htmlから読み込み） ===== */
+  try{
+    fetch('column.html').then(function(r){return r.ok?r.text():Promise.reject();}).then(function(t){
+      var d=new DOMParser().parseFromString(t,'text/html');
+      var cards=Array.prototype.slice.call(d.querySelectorAll('a.card'),0,3);
+      var box=document.getElementById('col-latest');
+      if(box&&cards.length){cards.forEach(function(c){box.appendChild(document.importNode(c,true));});}
+    }).catch(function(){});
+  }catch(e){}
 </script>
 </body>
 </html>
