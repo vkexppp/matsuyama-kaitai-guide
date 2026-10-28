@@ -161,6 +161,12 @@
   .head-tel:hover{transform:translateY(1px);box-shadow:0 2px 0 var(--orange-deep)}
   @media(max-width:820px){.gnav{display:none}}
 
+  .news-bar{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--orange-pale);border-bottom:1px solid var(--line);padding:9px 16px;font-size:12.5px;flex-wrap:wrap;text-align:center;line-height:1.7}
+  .news-bar .nb-chip{background:var(--orange);color:#fff;font-family:var(--display);font-weight:900;font-size:11px;border-radius:999px;padding:3px 12px;letter-spacing:.12em;flex:0 0 auto}
+  .news-bar .nb-text{font-weight:700;color:var(--ink)}
+  .news-bar:hover .nb-text{color:var(--orange-deep);text-decoration:underline}
+  .news-bar .nb-date{font-size:10.5px;color:var(--muted)}
+
   .hero{position:relative;min-height:72vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
   .hero .bg{position:absolute;inset:0;background-image:url("naruoHP2.jpg");background-size:cover;background-position:72% center}
   .hero .shade{position:absolute;inset:0;background:linear-gradient(to right,rgba(38,28,14,.62) 0%,rgba(38,28,14,.38) 42%,rgba(38,28,14,.04) 75%)}
@@ -339,6 +345,12 @@
 </header>
 
 <span id="top"></span>
+
+<a class="news-bar" href="hojokin.html">
+  <span class="nb-chip">速報</span>
+  <span class="nb-text">松山市の解体補助金、第3期の受付は11月2日（月）〜11月30日（月）。申請の準備はこちら →</span>
+  <span class="nb-date">2026.10.28更新</span>
+</a>
 
 <div class="hero">
   <div class="bg" role="img" aria-label="青空の下、解体現場の前で談笑する作業員たち"></div>
